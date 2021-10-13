@@ -15,6 +15,7 @@ fd2 = open("/home/shung/SP_HW1_HandWritten/outfile.txt",O_WRONLY | O_CREAT,0666)
 //read(fd1,&c,1);
 //printf("c = %c",c);
 dup2(fd1,0);
+dup2(1,2);
 dup2(fd2,1);
 execlp("./a.out","./a.out",(char *)0);
 return 0;
